@@ -16,8 +16,8 @@ local setup = function()
     }
   end
   keymaps = {
-    km('niv', '<M-a>', '<C-o>V')
-    km('niv', '<M-A>', '<C-o>ggVG')
+    km('niv', '<M-a>', '<C-o>V'),
+    km('niv', '<M-A>', '<C-o>ggVG'),
   }
   for _, v in ipairs(keymaps) do
     vim.keymap.set(v.mode, v.key, v.cmd, v.opt)
