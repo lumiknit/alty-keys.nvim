@@ -44,6 +44,42 @@ local setup = function()
     -- Find in workspace: Live Grep
     km('n', '<M-F>', ':Telescope live_grep<CR>'),
     km('iv', '<M-F>', '<C-o>:Telescope live_grep<CR>'),
+    -- Go to line
+    km('n', '<M-g>', ':'),
+    km('i', '<M-g>', '<C-o>:'),
+    km('v', '<M-g>', ':'),
+    -- Move left
+    km('n', '<M-h>', 'h'),
+    km('i', '<M-h>', '<C-o>h'),
+    km('v', '<M-h>', 'h'),
+    -- Select left
+    km('n', '<M-H>', 'hv'),
+    km('i', '<M-H>', '<ESC>hv'),
+    km('v', '<M-H>', 'h'),
+    -- Move down
+    km('n', '<M-j>', 'j'),
+    km('i', '<M-j>', '<C-o>j'),
+    km('v', '<M-j>', 'j'),
+    -- Select down
+    km('n', '<M-J>', 'vj'),
+    km('i', '<M-J>', '<ESC>vj'),
+    km('v', '<M-J>', 'j'),
+    -- Move up
+    km('n', '<M-k>', 'k'),
+    km('i', '<M-k>', '<C-o>k'),
+    km('v', '<M-k>', 'k'),
+    -- Select up
+    km('n', '<M-K>', 'hvk'),
+    km('i', '<M-K>', '<ESC>hvk'),
+    km('v', '<M-K>', 'k'),
+    -- Move right
+    km('n', '<M-l>', 'l'),
+    km('i', '<M-l>', '<C-o>l'),
+    km('v', '<M-l>', 'l'),
+    -- Select right
+    km('n', '<M-L>', 'v'),
+    km('i', '<M-L>', '<ESC>v'),
+    km('v', '<M-L>', 'l'),
   }
   for _, v in ipairs(keymaps) do
     vim.keymap.set(v.mode, v.key, v.cmd, v.opt)
