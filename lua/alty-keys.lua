@@ -25,8 +25,8 @@ local setup = function()
     km('i', '<M-A>', '<C-o>gg<C-o>VG'),
     km('v', '<M-A>', '<Esc>ggVG'),
     -- Multiple cursors for words: Unsupported
-    km('niv', '<M-b>', '')
-    km('niv', '<M-B>', '')
+    km('niv', '<M-b>', ''),
+    km('niv', '<M-B>', ''),
     -- Copy (If not selected, copy line)
     km('n', '<M-c>', 'yyi'),
     km('i', '<M-c>', '<C-o>yy'),
@@ -115,7 +115,7 @@ local setup = function()
     km('nv', '<M-r>', ':%s/'),
     km('i', '<M-r>', '<C-o>:%s/'),
     -- Replace in project: Unsupported
-    km('niv', '<M-R>', '')
+    km('niv', '<M-R>', ''),
     -- Save
     km('niv', '<M-s>', '<cmd>w<CR>'),
     -- Save as
@@ -173,9 +173,9 @@ local setup = function()
     km('n', '<M-?>', 'GA'),
     km('iv', '<M-?>', '<ESC>GA'),
     -- Toggle terminal: Unsupported
-    km('niv', '<M-\'>', '')
+    km('niv', '<M-\'>', ''),
     -- Toggle terminal fullscreen: Unsupported
-    km('niv', '<M-\">', '')
+    km('niv', '<M-\">', ''),
     -- Left pane: Unsupported
     km('niv', '<M-\\>', ''),
     -- Zen mode
