@@ -58,7 +58,7 @@ local setup = function()
     km('v', '<C-M-h>', 'di'),
     -- Select left
     km('n', '<M-H>', 'hv'),
-    km('i', '<M-H>', '<ESC>hv'),
+    km('i', '<M-H>', '<ESC>v'),
     km('v', '<M-H>', 'h'),
     -- Move to word end
     km('n', '<M-i>', 'ea'),
@@ -66,7 +66,7 @@ local setup = function()
     km('v', '<M-i>', '<ESC>ea'),
     -- Select to word end
     km('n', '<M-I>', 've'),
-    km('i', '<M-I>', '<ESC>ve'),
+    km('i', '<M-I>', '<ESC>lve'),
     km('v', '<M-I>', 'e'),
     -- Move down
     km('n', '<M-j>', 'ji'),
