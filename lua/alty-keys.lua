@@ -25,10 +25,12 @@ local setup = function()
     km('i', '<M-A>', '<C-o>gg<C-o>VG'),
     km('v', '<M-A>', '<Esc>ggVG'),
     -- Multiple cursors for words: Unsupported
+    km('niv', '<M-b>', '')
+    km('niv', '<M-B>', '')
     -- Copy (If not selected, copy line)
     km('n', '<M-c>', 'yyi'),
     km('i', '<M-c>', '<C-o>yy'),
-    km('v', '<M-c>', 'ya'),
+    km('v', '<M-c>', 'ygv<ESC>'),
     -- Delete a character
     km('n', '<M-d>', 'xi'),
     km('i', '<M-d>', '<C-o>x'),
@@ -49,7 +51,7 @@ local setup = function()
     km('v', '<M-g>', ':'),
     -- Move left
     km('n', '<M-h>', 'hi'),
-    km('i', '<M-h>', '<C-o>h'),
+    km('i', '<M-h>', '<LEFT>'),
     km('v', '<M-h>', '<ESC>hi'),
     -- Backspace
     km('ni', '<C-M-h>', '<C-o>dh'),
@@ -68,18 +70,18 @@ local setup = function()
     km('v', '<M-I>', 'e'),
     -- Move down
     km('n', '<M-j>', 'ji'),
-    km('i', '<M-j>', '<C-o>j'),
+    km('i', '<M-j>', '<DOWN>'),
     km('v', '<M-j>', '<ESC>ji'),
     -- Select down
     km('n', '<M-J>', 'vj'),
     km('i', '<M-J>', '<ESC>vj'),
     km('v', '<M-J>', 'j'),
     -- Join lines
-    km('n', '<M-J>', 'JA'),
-    km('iv', '<M-J>', '<ESC>JA'),
+    km('n', '<C-M-j>', 'JA'),
+    km('iv', '<C-M-j>', '<ESC>JA'),
     -- Move up
     km('n', '<M-k>', 'ki'),
-    km('i', '<M-k>', '<C-o>k'),
+    km('i', '<M-k>', '<UP>'),
     km('v', '<M-k>', '<ESC>ki'),
     -- Select up
     km('n', '<M-K>', 'hvk'),
@@ -87,7 +89,7 @@ local setup = function()
     km('v', '<M-K>', 'k'),
     -- Move right
     km('n', '<M-l>', 'a'),
-    km('i', '<M-l>', '<C-o>a'),
+    km('i', '<M-l>', '<RIGHT>'),
     km('v', '<M-l>', '<ESC>a'),
     -- Select right
     km('n', '<M-L>', 'lv'),
@@ -113,6 +115,7 @@ local setup = function()
     km('nv', '<M-r>', ':%s/'),
     km('i', '<M-r>', '<C-o>:%s/'),
     -- Replace in project: Unsupported
+    km('niv', '<M-R>', '')
     -- Save
     km('niv', '<M-s>', '<cmd>w<CR>'),
     -- Save as
@@ -169,6 +172,12 @@ local setup = function()
     -- Move to the end of file
     km('n', '<M-?>', 'GA'),
     km('iv', '<M-?>', '<ESC>GA'),
+    -- Toggle terminal: Unsupported
+    km('niv', '<M-\'>', '')
+    -- Toggle terminal fullscreen: Unsupported
+    km('niv', '<M-\">', '')
+    -- Left pane: Unsupported
+    km('niv', '<M-\\>', ''),
     -- Zen mode
     km('niv', '<M-|>', '<cmd>ZenMode<CR>'),
   }
