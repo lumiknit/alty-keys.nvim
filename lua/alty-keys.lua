@@ -74,7 +74,7 @@ local setup = function()
     km('v', '<M-j>', '<ESC>ji'),
     -- Select down
     km('n', '<M-J>', 'vj'),
-    km('i', '<M-J>', '<ESC>vj'),
+    km('i', '<M-J>', '<ESC>lvj'),
     km('v', '<M-J>', 'j'),
     -- Join lines
     km('n', '<C-M-j>', 'JA'),
@@ -84,8 +84,8 @@ local setup = function()
     km('i', '<M-k>', '<UP>'),
     km('v', '<M-k>', '<ESC>ki'),
     -- Select up
-    km('n', '<M-K>', 'hvk'),
-    km('i', '<M-K>', '<ESC>hvk'),
+    km('n', '<M-K>', 'hvkl'),
+    km('i', '<M-K>', '<ESC>vkl'),
     km('v', '<M-K>', 'k'),
     -- Move right
     km('n', '<M-l>', 'a'),
@@ -129,11 +129,11 @@ local setup = function()
     -- Select to word start
     km('n', '<M-U>', 'vb'),
     km('i', '<M-U>', '<ESC>vb'),
-    km('v', '<M-U>', 'b'),
+    km('v', '<M-U>', 'b'), 
     -- Paste
-    km('n', '<M-v>', 'p'),
-    km('i', '<M-v>', '<C-o>p'),
-    km('v', '<M-v>', 'p'),
+    km('n', '<M-v>', 'pi'),
+    km('i', '<M-v>', '<LEFT><C-o>p'),
+    km('v', '<M-v>', 'pi'),
     -- Cut
     km('n', '<M-x>', 'dd'),
     km('i', '<M-x>', '<C-o>dd'),
@@ -180,6 +180,13 @@ local setup = function()
     km('niv', '<M-\\>', ''),
     -- Zen mode
     km('niv', '<M-|>', '<cmd>ZenMode<CR>'),
+    -- Delete word
+    km('n', '<M-BS>', 'hdawi'),
+    km('i', '<M-BS>', '<C-o>h<C-o>daw'),
+    km('v', '<M-BS>', 'di'),
+    --- non-alty keys
+    km('n', '<BS>', 'dhi'),
+    km('v', '<BS>', 'd'),
   }
   for _, v in ipairs(keymaps) do
     vim.keymap.set(v.mode, v.key, v.cmd, v.opt)
