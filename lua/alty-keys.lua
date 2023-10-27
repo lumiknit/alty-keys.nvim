@@ -58,7 +58,7 @@ local setup = function()
     km('v', '<C-M-h>', 'di'),
     -- Select left
     km('n', '<M-H>', 'hv'),
-    km('i', '<M-H>', '<ESC>v'),
+    km('i', '<M-H>', '<C-o>v'),
     km('v', '<M-H>', 'h'),
     -- Move to word end
     km('n', '<M-i>', 'ea'),
@@ -66,7 +66,7 @@ local setup = function()
     km('v', '<M-i>', '<ESC>ea'),
     -- Select to word end
     km('n', '<M-I>', 've'),
-    km('i', '<M-I>', '<ESC>lve'),
+    km('i', '<M-I>', '<C-o>ve'),
     km('v', '<M-I>', 'e'),
     -- Move down
     km('n', '<M-j>', 'ji'),
@@ -74,7 +74,7 @@ local setup = function()
     km('v', '<M-j>', '<ESC>ji'),
     -- Select down
     km('n', '<M-J>', 'vj'),
-    km('i', '<M-J>', '<ESC>lvj'),
+    km('i', '<M-J>', '<C-o>vj'),
     km('v', '<M-J>', 'j'),
     -- Join lines
     km('n', '<C-M-j>', 'JA'),
@@ -85,7 +85,7 @@ local setup = function()
     km('v', '<M-k>', '<ESC>ki'),
     -- Select up
     km('n', '<M-K>', 'hvkl'),
-    km('i', '<M-K>', '<ESC>vkl'),
+    km('i', '<M-K>', '<LEFT><C-o>vk'),
     km('v', '<M-K>', 'k'),
     -- Move right
     km('n', '<M-l>', 'a'),
@@ -101,7 +101,7 @@ local setup = function()
     km('v', '<M-o>', '<ESC>A'),
     -- Select to the end of line
     km('n', '<M-O>', 'v$'),
-    km('i', '<M-O>', '<ESC>v$'),
+    km('i', '<M-O>', '<C-o>v$'),
     km('v', '<M-O>', '$'),
     -- Open file palette
     km('niv', '<M-p>', '<cmd>Telescope find_files<CR>'),
@@ -128,7 +128,7 @@ local setup = function()
     km('v', '<M-u>', '<ESC>bi'),
     -- Select to word start
     km('n', '<M-U>', 'vb'),
-    km('i', '<M-U>', '<ESC>vb'),
+    km('i', '<M-U>', '<LEFT><C-o>vb'),
     km('v', '<M-U>', 'b'), 
     -- Paste
     km('n', '<M-v>', 'pi'),
@@ -144,7 +144,7 @@ local setup = function()
     km('v', '<M-y>', '<ESC>I'),
     -- Select to the beginning of line
     km('n', '<M-Y>', 'v^'),
-    km('i', '<M-Y>', '<ESC>v^'),
+    km('i', '<M-Y>', '<LEFT><C-o>v^'),
     km('v', '<M-Y>', '^'),
     -- Undo
     km('niv', '<M-z>', '<cmd>undo<CR>'),
@@ -156,7 +156,7 @@ local setup = function()
     km('v', '<M-,>', '<ESC><C-u>'),
     -- Select half page up
     km('n', '<M-<>', 'v<C-u>'),
-    km('i', '<M-<>', '<ESC>v<C-u>'),
+    km('i', '<M-<>', '<LEFT><C-o>v<C-u>'),
     km('v', '<M-<>', '<C-u>'),
     -- Half page down
     km('n', '<M-.>', '<C-d>'),
@@ -164,7 +164,7 @@ local setup = function()
     km('v', '<M-.>', '<ESC><C-d>'),
     -- Select half page down
     km('n', '<M->>', 'v<C-d>'),
-    km('i', '<M->>', '<ESC>v<C-d>'),
+    km('i', '<M->>', '<C-o>v<C-d>'),
     km('v', '<M->>', '<C-d>'),
     -- Move to the beginning of file
     km('n', '<M-/>', 'ggI'),

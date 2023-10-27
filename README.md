@@ -12,8 +12,8 @@ use {
   'lumiknit/alty-keys.nvim',
   config = function()
     require("alty-keys").setup()
+    # Recommand to use with `virtualedit=onemore` option.
+    vim.opt.virtualedit = "onemore"
   end
 }
 ```
-
-Recommand to use with `virtualedit=onemore` option.
