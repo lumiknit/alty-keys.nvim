@@ -92,8 +92,8 @@ local setup = function()
     km('i', '<M-l>', '<RIGHT>'),
     km('v', '<M-l>', '<ESC>a'),
     -- Select right
-    km('n', '<M-L>', 'lv'),
-    km('i', '<M-L>', '<ESC>lv'),
+    km('n', '<M-L>', 'v'),
+    km('i', '<M-L>', '<C-o>v'),
     km('v', '<M-L>', 'l'),
     -- Move to the end of line
     km('n', '<M-o>', 'A'),
