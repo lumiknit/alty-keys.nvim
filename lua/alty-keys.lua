@@ -74,7 +74,7 @@ local setup = function()
     km('v', '<M-j>', '<ESC>ji'),
     -- Select down
     km('n', '<M-J>', 'vj'),
-    km('i', '<M-J>', '<ESC>vlolj'),
+    km('i', '<M-J>', '<ESC>lvj'),
     km('v', '<M-J>', 'j'),
     -- Join lines
     km('n', '<C-M-j>', 'JA'),
@@ -93,7 +93,7 @@ local setup = function()
     km('v', '<M-l>', '<ESC>a'),
     -- Select right
     km('n', '<M-L>', 'lv'),
-    km('i', '<M-L>', '<ESC>vlol'),
+    km('i', '<M-L>', '<ESC>lv'),
     km('v', '<M-L>', 'l'),
     -- Move to the end of line
     km('n', '<M-o>', 'A'),
