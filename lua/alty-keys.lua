@@ -111,6 +111,8 @@ local setup = function()
     km('niv', '<M-q>', '<cmd>bd<CR>'),
     -- Close all buffers
     km('niv', '<M-Q>', '<cmd>bufdo bd<CR>'),
+    -- Quit force
+    km('niv', '<C-M-q>', '<cmd>qa<CR>'),
     -- Replace
     km('nv', '<M-r>', ':%s/'),
     km('i', '<M-r>', '<C-o>:%s/'),
