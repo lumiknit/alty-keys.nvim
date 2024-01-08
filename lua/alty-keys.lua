@@ -58,7 +58,7 @@ local setup = function()
     km('v', '<C-M-h>', 'di'),
     -- Select left
     km('n', '<M-H>', 'hv'),
-    km('i', '<M-H>', '<C-o>v'),
+    km('i', '<M-H>', '<LEFT><C-o>v'),
     km('v', '<M-H>', 'h'),
     -- Move to word end
     km('n', '<M-i>', 'ea'),
@@ -73,8 +73,8 @@ local setup = function()
     km('i', '<M-j>', '<DOWN>'),
     km('v', '<M-j>', '<ESC>ji'),
     -- Select down
-    km('n', '<M-J>', 'vj'),
-    km('i', '<M-J>', '<C-o>vj'),
+    km('n', '<M-J>', 'vjh'),
+    km('i', '<M-J>', '<C-o>vjh'),
     km('v', '<M-J>', 'j'),
     -- Join lines
     km('n', '<C-M-j>', 'JA'),
@@ -85,7 +85,7 @@ local setup = function()
     km('v', '<M-k>', '<ESC>ki'),
     -- Select up
     km('n', '<M-K>', 'hvkl'),
-    km('i', '<M-K>', '<LEFT><C-o>vk'),
+    km('i', '<M-K>', '<LEFT><C-o>vk<RIGHT>'),
     km('v', '<M-K>', 'k'),
     -- Move right
     km('n', '<M-l>', 'a'),
@@ -176,7 +176,8 @@ local setup = function()
     km('n', '<M-?>', 'GA'),
     km('iv', '<M-?>', '<ESC>GA'),
     -- Toggle terminal: Unsupported
-    km('niv', '<M-\'>', ''),
+    km('n', '<M-\'>', '<C-z>'),
+    km('iv', '<M-\'>', '<C-o><C-z>'),
     -- Toggle terminal fullscreen: Unsupported
     km('niv', '<M-\">', ''),
     -- Left pane: Unsupported
