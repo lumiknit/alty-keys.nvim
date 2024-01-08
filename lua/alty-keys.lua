@@ -179,7 +179,8 @@ local setup = function()
     km('n', '<M-\'>', '<C-z>'),
     km('iv', '<M-\'>', '<C-o><C-z>'),
     -- Toggle terminal fullscreen: Unsupported
-    km('niv', '<M-\">', ''),
+    km('n', '<M-\">', '<C-z>'),
+    km('iv', '<M-\">', '<C-o><C-z>'),
     -- Left pane: Unsupported
     km('niv', '<M-\\>', ''),
     -- Zen mode
