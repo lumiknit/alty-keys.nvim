@@ -125,6 +125,10 @@ local setup = function()
     km('n', '<M-S>', ':w '),
     km('i', '<M-S>', '<C-o>:w '),
     km('v', '<M-S>', '<ESC>:w '),
+    -- Save and quit
+    km('n', '<C-M-s>', ':wq '),
+    km('i', '<C-M-s>', '<C-o>:wq '),
+    km('v', '<C-M-s>', '<ESC>:wq '),
     -- Move to word start
     km('n', '<M-u>', 'bi'),
     km('i', '<M-u>', '<C-o>bi'),
